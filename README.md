@@ -1,51 +1,103 @@
-# CodeCollab - Collaborative Code Editor
+# CodeCast – Real-Time Collaborative Code Editor
 
-CodeCollab is a powerful real-time code collaboration environment. It empowers teams to work together seamlessly in a shared virtual workspace. Built on the **ERN stack (Express.js, React, Node.js)** with **Socket.IO** providing low-latency, real-time synchronization.
+CodeCast is a full-stack real-time collaborative code editor that enables multiple users to write, edit, and collaborate on code simultaneously in shared rooms. The application provides real-time synchronization using Socket.IO, a CodeMirror-powered editor, language selection, and a responsive user interface for seamless collaboration.
 
 ## Features
 
-- **Real-Time Synchronization**: Changes appear instantly for all users connected to the same room.
-- **Room System**: Generate unique room IDs and share them with teammates to collaborate securely.
-- **Syntax Highlighting**: Enhanced code readability with intelligent syntax highlighting using CodeMirror.
-- **User Presence**: See exactly who is in the room with you and track their activity.
+- Real-time collaborative code editing
+- Shared coding rooms
+- Live synchronization using Socket.IO
+- CodeMirror-powered code editor
+- Language selection
+- Responsive user interface
+- Multi-user collaboration
 
 ## Tech Stack
 
-**Client:**
+### Frontend
 - React.js
 - CodeMirror
-- Socket.IO Client
+- CSS
 
-**Server:**
+### Backend
 - Node.js
 - Express.js
-- Socket.IO Configuration
+- Socket.IO
 
-## Local Development Setup
+## Project Structure
 
-To run CodeCollab locally on your own machine:
+```
+CodeCast
+│
+├── client
+│   ├── public
+│   ├── src
+│   │   ├── components
+│   │   │   ├── Client.js
+│   │   │   ├── Editor.js
+│   │   │   ├── EditorPage.js
+│   │   │   └── Home.js
+│   │   ├── App.js
+│   │   ├── Socket.js
+│   │   ├── Constants.js
+│   │   ├── index.js
+│   │   └── index.css
+│   ├── package.json
+│   └── README.md
+│
+├── server
+│   ├── index.js
+│   ├── Constants.js
+│   ├── package.json
+│   └── test.js
+│
+└── README.md
+```
 
-1. **Clone your repository:**
-   ```bash
-   git clone <your-repository-url>
-   cd codecollab
-   ```
+## Installation
 
-2. **Start the server:**
-   Navigate to the server directory, install dependencies, and start the node server.
-   ```bash
-   cd server
-   npm install
-   npm start
-   ```
+### Clone Repository
 
-3. **Start the client:**
-   In a separate terminal, navigate to the client directory, install dependencies, and start the React app.
-   ```bash
-   cd client
-   npm install
-   npm start
-   ```
+```bash
+git clone https://github.com/your-username/codecast.git
+```
 
-## Getting Started
-Once both servers are running, the application will typically be available at `http://localhost:3000`. Simply create a room and share the Room ID with your peers to begin!
+### Install Client Dependencies
+
+```bash
+cd client
+npm install
+```
+
+### Install Server Dependencies
+
+```bash
+cd ../server
+npm install
+```
+
+### Run Backend
+
+```bash
+npm start
+```
+
+### Run Frontend
+
+```bash
+cd ../client
+npm start
+```
+
+## Future Enhancements
+
+- Authentication
+- File Management
+- Code Execution Support
+- Chat System
+- Voice Collaboration
+- Theme Switching
+
+## Contributors
+
+This project was developed as a group project. My contributions included frontend development, feature integration, and collaborative implementation.
